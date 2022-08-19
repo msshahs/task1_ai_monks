@@ -1,0 +1,22 @@
+
+                                         DOCUMENTATION
+
+Step 1 : Create an empty new folder
+
+Step 2 : Open that folder in editor (eg VS CODE) 
+         Open Terminal (make sure u are in ur current directory)
+
+Step 3 : In terminal clone my github repository(given below) to get all CODE
+         paste this in terminal : git clone https://github.com/msshahs/task1_ai_monks
+
+        Now u must have all my files in ur folder after this
+
+Step 4 : Now in terminal change current directory to -> task1_ai_monks(given below)
+        paste this in terminal : cd .\task1_ai_monks\
+
+Step 5 : Now to run code write following in terminal 
+        paste this in terminal to run code : node main.js
+
+[Important Note : whichever images you need to convert in text form place it inside the images folder only
+                  and do not place more than 3-4 images right now because we are testing on free api service 
+                  so we can make only 20 calls per min]

@@ -79,31 +79,25 @@ const get_api_call =async(val,wot_ext)=>{
         let line_arr = ele.lines;
         let temp_string =""
         for (const e of line_arr) {
-            let coord = e.boundingBox;
-            let st = ""
-            for (const e of coord) {
-              st = st + " " +e 
+  
+            let word_array = e.words
+            let op = ""
+            for (const e of word_array) {
+              op = op + "\n" + e.boundingBox + ","+ e.text +  ",WOR"
             }
-            // console.log(st);
-            temp_string = temp_string + "\n" +"[" + st + "]" +"\n"+  e.text
+            
+            temp_string = temp_string + op
         }
         final_string_data = final_string_data + temp_string + "\n"
       }
-      // console.log(final_string_data);
-      // console.log(wot_ext);
-      // console.log( wot_ext + ".json");
+      console.log(wot_ext);
 
-      let pt = wot_ext + ".json"
+      let pt = wot_ext + ".txt"
       fs.writeFile(pt, final_string_data, function (err) {
             if (err) throw err;
             console.log('******* Saved! ' + pt + " successfully *******");
           });
     }
-  
-
-  
-  
-
 }
 
 for (let i = 0; i < files.length; i++) {

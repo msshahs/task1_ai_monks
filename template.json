@@ -1,0 +1,37 @@
+{
+    "dataset_id": 2226,
+    "organisation_id": "5e3d5300df42650010ffbb3c",
+    "category_type": "OCR",
+    "images": [
+        {
+            "image_name": "engineering_servicesMainQPESEP20MECH_ENGG18.jpg",
+            "image_tags": [],
+            "image_url": "https://media.neuralmarker.ai/datasets/5e3d5300df42650010ffbb3c/images/61e002a4cf833c6ed7441190.jpg",
+            "height": 792,
+            "width": 612,
+            "rotation_angle": 0,
+            "annotations": [
+                {
+                    "id": "61f3fc95669a83000a71ff7f",
+                    "category_name": "eq_box",
+                    "area": 484,
+                    "creator": "NeuralMarker",
+                    "annotation_tags": [],
+                    "polygon": [
+                        [
+                            278.0,
+                            662.0,
+                            322.0,
+                            662.0,
+                            322.0,
+                            673.0,
+                            278.0,
+                            673.0
+                        ]
+                    ],
+                    "ocr-text": " "
+                }
+            ]
+        }
+    ]
+}
