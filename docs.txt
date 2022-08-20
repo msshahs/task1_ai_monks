@@ -1,6 +1,8 @@
 
                                          DOCUMENTATION
 
+        Download node.js if not installed from google first
+
 Step 1 : Create an empty new folder
 
 Step 2 : Open that folder in editor (eg VS CODE) 
