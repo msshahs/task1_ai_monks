@@ -1,3 +1,5 @@
+//just extra file for experiments
+
 import sizeOf from 'image-size'
 
 let size_data = sizeOf('./images/final.png')

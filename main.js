@@ -90,9 +90,9 @@ const get_api_call =async(val,wot_ext)=>{
         }
         final_string_data = final_string_data + temp_string + "\n"
       }
-      console.log(wot_ext);
+      // console.log(wot_ext);
 
-      let pt = wot_ext + ".txt"
+      let pt = "./conv_text/" + wot_ext + ".txt"
       fs.writeFile(pt, final_string_data, function (err) {
             if (err) throw err;
             console.log('******* Saved! ' + pt + " successfully *******");
