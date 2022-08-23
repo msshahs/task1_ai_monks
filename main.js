@@ -3,14 +3,17 @@
   import fs from 'fs'
   import FormData from "form-data"
   
-  let files = fs.readdirSync('./images');
+  
+  let args = process.argv
+  let folder_name  = args[2];
+ 
 
   
 const read_api_call = async(folderimage) => {
 
   let temp = folderimage.split('.')
   const formData = new FormData();
-  let image_url = './images/' + folderimage
+  let image_url = './' + folder_name + '/' + folderimage
   formData.append( 'file', fs.createReadStream(image_url));
 
     // console.log("***** OUTPUT of IMAGE - " + folderimage + " *****");
@@ -92,7 +95,7 @@ const get_api_call =async(val,wot_ext)=>{
       }
       // console.log(wot_ext);
 
-      let pt = "./conv_text/" + wot_ext + ".txt"
+      let pt = "./"+folder_name+"/" + wot_ext + ".txt"
       fs.writeFile(pt, final_string_data, function (err) {
             if (err) throw err;
             console.log('******* Saved! ' + pt + " successfully *******");
@@ -100,9 +103,25 @@ const get_api_call =async(val,wot_ext)=>{
     }
 }
 
-for (let i = 0; i < files.length; i++) {
 
-    read_api_call(files[i]);
-  
+if(folder_name){
+  let folder_url = "./" + folder_name
+  if(fs.existsSync(folder_url)){
+    let files = fs.readdirSync(folder_url);
+    if(files.length !=0){
+      for (let i = 0; i < files.length; i++) {
+        read_api_call(files[i]);
+    }
+    }
+    else{
+      console.log(`No images found to covert to convert to text in the ${folder_name}`);
+    }
+  }else{
+    console.log(`No such folder exists - ${folder_name}`);
+  }
 }
+else{
+  console.log('No folder name entered');
+}
+
 
